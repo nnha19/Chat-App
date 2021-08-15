@@ -9,7 +9,7 @@ const DeleteToDo: React.FC<IProps> = ({ deleteToDo, id }) => {
   return (
     <i
       onClick={() => deleteToDo(id)}
-      className="fas text-red-700 text-lg cursor-pointer fa-trash"
+      className="fas  text-red-700 text-lg cursor-pointer fa-trash"
     ></i>
   );
 };

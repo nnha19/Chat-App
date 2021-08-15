@@ -18,7 +18,7 @@ const ToDos = () => {
   ]);
 
   return (
-    <div className="w-1/3 bg-yellow-500  my-12 mx-auto">
+    <div className="w-full sm:11/12 md:w-2/3 lg:w-2/5 bg-yellow-500  my-12 mx-auto">
       <FilterToDos />
       <ToDoList toDos={toDos} setToDos={setToDos} />
       <AddToDos toDos={toDos} setToDos={setToDos} />

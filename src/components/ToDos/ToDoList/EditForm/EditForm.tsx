@@ -30,13 +30,13 @@ const EditForm: React.FC<IProps> = ({
       <div>
         <button
           onClick={() => editConfirm(id, editedVal)}
-          className="py-1 px-4 rounded bg-purple-600 text-white ml-4 mr-4"
+          className="mb-2 sm:mb-0 py-1 px-4 rounded bg-purple-600 text-white ml-4 mr-4"
         >
           Edit
         </button>
         <button
           onClick={() => cancelEdit(id)}
-          className="py-1 px-4 rounded bg-red-500 text-white"
+          className="ml-2 sm:ml-0 py-1 px-4 rounded bg-red-500 text-white"
         >
           Cancel
         </button>
