@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 
 export interface IProps {
-  toDos: string[];
-  setToDos: React.Dispatch<React.SetStateAction<string[]>>;
+  toDos: {
+    toDo: string;
+    isEditing?: boolean;
+  }[];
+  setToDos: React.Dispatch<
+    React.SetStateAction<
+      {
+        toDo: string;
+        isEditing?: boolean | undefined;
+      }[]
+    >
+  >;
 }
 
 const AddToDos: React.FC<IProps> = ({ toDos, setToDos }) => {
@@ -16,7 +26,7 @@ const AddToDos: React.FC<IProps> = ({ toDos, setToDos }) => {
     if (!input) {
       return;
     }
-    setToDos([...toDos, input]);
+    setToDos([...toDos, { toDo: input }]);
     setInput("");
   };
 

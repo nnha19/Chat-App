@@ -4,10 +4,17 @@ import FilterToDos from "./FilterToDos/FilterToDos";
 import ToDoList from "./ToDoList/ToDoList";
 import AddToDos from "./AddToDos/AddToDos";
 
+export interface IState {
+  toDos: {
+    toDo: string;
+    isEditing?: boolean;
+  }[];
+}
+
 const ToDos = () => {
-  const [toDos, setToDos] = useState<string[]>([
-    "Go Shopping",
-    "Walk The Dog.",
+  const [toDos, setToDos] = useState<IState["toDos"]>([
+    { toDo: "Go Shopping" },
+    { toDo: "Walk The Dog" },
   ]);
 
   return (
