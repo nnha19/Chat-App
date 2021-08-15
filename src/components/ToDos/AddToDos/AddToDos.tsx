@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-interface IProps {
+export interface IProps {
   toDos: string[];
   setToDos: React.Dispatch<React.SetStateAction<string[]>>;
 }
@@ -13,6 +13,9 @@ const AddToDos: React.FC<IProps> = ({ toDos, setToDos }) => {
   };
 
   const addToDoHandler = (): void => {
+    if (!input) {
+      return;
+    }
     setToDos([...toDos, input]);
     setInput("");
   };
