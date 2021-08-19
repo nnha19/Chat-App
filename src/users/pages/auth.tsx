@@ -3,11 +3,11 @@ import React from "react";
 import Auth from "../components/Auth";
 
 interface IProps {
-  setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleAuthentication: () => void;
 }
 
-const AuthPage: React.FC<IProps> = ({ setIsAuthenticated }) => {
-  return <Auth setIsAuthenticated={setIsAuthenticated} />;
+const AuthPage: React.FC<IProps> = ({ toggleAuthentication }) => {
+  return <Auth toggleAuthentication={toggleAuthentication} />;
 };
 
 export default AuthPage;

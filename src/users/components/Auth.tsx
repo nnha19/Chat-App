@@ -10,10 +10,10 @@ interface IFormVal {
 }
 
 interface IProps {
-  setIsAuthenticated: React.Dispatch<React.SetStateAction<boolean>>;
+  toggleAuthentication: () => void;
 }
 
-const Auth: React.FC<IProps> = ({ setIsAuthenticated }) => {
+const Auth: React.FC<IProps> = ({ toggleAuthentication }) => {
   const [inputVals, setInputVals] = useState<IFormVal>({
     name: "",
     email: "",
@@ -29,7 +29,7 @@ const Auth: React.FC<IProps> = ({ setIsAuthenticated }) => {
 
   const registerUserHandler = (e: any) => {
     e.preventDefault();
-    setIsAuthenticated(true);
+    toggleAuthentication();
     const clearInput: any = {};
     for (let key in inputVals) {
       clearInput[key as keyof IFormVal] = "";
